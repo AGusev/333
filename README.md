@@ -1,0 +1,1 @@
+An example of static (from a file) and dynamic (produced from a server) JSON data access.

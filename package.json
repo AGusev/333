@@ -1,0 +1,22 @@
+{
+  "name": "myserver",
+  "version": "1.0.0",
+  "description": "An example of static (from a file) and dynamic (produced from a server) JSON data access.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BabaKofiFHDA/myserver.git"
+  },
+  "author": "Aleksandr Gusev and Mukul Natarajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BabaKofiFHDA/myserver/issues"
+  },
+  "homepage": "https://github.com/BabaKofiFHDA/myserver#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

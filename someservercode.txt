@@ -1,0 +1,50 @@
+var getPrice = function() {
+    var thePrice = 500;
+    if (this.speed == "4GHz") {
+        thePrice += 300;
+    }
+    else {
+        thePrice += 100;
+    }
+    if (this.hdspace == "1TB") {
+        thePrice += 150;
+    }
+    else {
+        thePrice += 80;
+    }
+    if (this.ram == "16GB") {
+        thePrice += 200;
+    }
+    else {
+        thePrice += 100;
+    }
+    return thePrice;
+};
+var Computer = function(speed, hdspace, ram) {
+    this.speed = speed;
+    this.hdspace = hdspace;
+    this.ram = ram;
+    this.getPrice = getPrice;
+    this.price = this.getPrice();
+};
+
+console.log(Computer);
+var workComputer = new Computer("3.4GHz", "500GB", "4GB");
+console.log(workComputer);
+console.log(workComputer.price);
+var homeComputer = new Computer("4GHz", "1TB", "16GB");
+console.log(homeComputer);
+console.log(homeComputer.price);
+var laptop = new Computer("2.93GHz", "250GB", "8GB");
+console.log(laptop);
+console.log(laptop.price);
+
+
+var computers = {
+    "Work Computer": workComputer,
+    "Home Computer": homeComputer,
+    "Laptop": laptop
+};
+app.get('/api/computers.json', function(req, res) {
+    res.send(computers);
+});
